@@ -1,0 +1,24 @@
+{% extends "invapp/layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center bg-white rounded-3 shadow-sm p-5">
+    <h1 class="display-4 mb-4">Welcome to the Inventory Management System</h1>
+    <p class="lead mb-4">
+        Manage your products efficiently and effectively with our state-of-the-art system.
+    </p>
+    <hr class="my-4">
+    <p class="mb-4">
+        Use the navigation bar to add, view, update or delete products. Get started by viewing your current inventory or adding a new product.
+    </p>
+    <div class="d-grid gap-2 d-md-block">
+        <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg me-md-2" role="button">
+            <i class="fas fa-list me-2"></i>View Products
+        </a>
+        <a href="{% url 'product_create' %}" class="btn btn-outline-secondary btn-lg" role="button">
+            <i class="fas fa-plus-circle me-2"></i>Add New Product
+        </a>
+    </div>
+</div>
+{% endblock %}
